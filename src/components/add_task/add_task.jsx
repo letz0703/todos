@@ -1,5 +1,7 @@
 import {useState, useRef, useEffect} from 'react'
 import styles from './add_task.module.css'
+import {v4 as uuidv4} from 'uuid'
+
 export default function AddTask({onAdd}) {
 	const [task, setTask] = useState('')
 	const handleChange = (e) => {
@@ -14,7 +16,7 @@ export default function AddTask({onAdd}) {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		if (task.trim().length === 0) {return }
-		onAdd({id: 'goyou', task, status: 'active'})
+		onAdd({id: uuidv4, task, status: 'active'})
 		setTask('')
 	}
 	return (
