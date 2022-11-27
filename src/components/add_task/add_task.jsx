@@ -6,6 +6,7 @@ export default function AddTask({onAdd}) {
 		setTask(e.target.value)
 	}
 	const refInput_task = useRef()
+
 	useEffect(() => {
 		refInput_task.current.focus()
 	}, [task])
@@ -18,7 +19,7 @@ export default function AddTask({onAdd}) {
 	}
 	return (
 		<form onSubmit={handleSubmit}>
-			<input ref={refInput_task} type="text" value={task} onChange={handleChange} />
+			<input ref={refInput_task} type="text" value={task} onChange={handleChange} className="bg-red-200 p-2 mx-1" />
 			<button>Add</button>
 		</form>
 	)
