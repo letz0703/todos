@@ -8,7 +8,7 @@ export default function AddTask({onAdd}) {
 	const refInput_task = useRef()
 	useEffect(() => {
 		refInput_task.current.focus()
-	}, [])
+	}, [task])
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
