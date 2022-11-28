@@ -18,14 +18,20 @@ export default function TodoList() {
 	const handleDelete = (todo) => {
 		setTodos(todos.filter(row => row.id !== todo.id))
 	}
+
+	const handleUpdate = (updated) => setTodos(todos.map(
+		row => (row.id === updated.id ? updated : row)
+	))
+
 	return (
 		<section className="todos">
 			<ul>
-				{todos.map(todo => (
-					<Todo key={uuidv4()} todo={todo}
+				{todos.map(row => [
+					<Todo key={uuidv4()} todo={row}
+						onChange={handleUpdate}
 						onDelete={handleDelete}
 					/>
-				))}
+				])}
 			</ul>
 			<AddTask onAdd={handleTask} />
 		</section>
