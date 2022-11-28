@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import AddTask from "../add_task/add_task"
 import {v4 as uuidv4} from 'uuid'
+import Todo from "../todo/todo"
 
 export default function TodoList() {
 	const [todos, setTodos] = useState([
@@ -10,23 +11,23 @@ export default function TodoList() {
 
 
 	const handleTask = todo => {
-		// console.log(todo)
 		setTodos([...todos, todo])
 	}
 
-	const handleDelete = (e) => {
-		setTodos(todos.filter(todo => todo.task !== e.target.value)
+	const handleDelete = (todo) => {
+		setTodos(todos.filter(row => row.id !== todo.id)
 		)
+	}
+
+	const handleUpdate = (updated) => {
+		setTodos(todos.map(t => (t.id === updated.id) ? updated : t))
 	}
 
 	return (
 		<section className="todos">
 			<ul>
 				{todos.map(row => (
-					<li key={uuidv4()}>
-						{row.task}
-						<button onClick={handleDelete} value={row.task}>🗑️</button>
-					</li>
+					<Todo key={uuidv4()} todo={row} onUpdate={handleUpdate} onDelete={handleDelete} />
 				))}
 			</ul>
 			<AddTask onAdd={handleTask} />
