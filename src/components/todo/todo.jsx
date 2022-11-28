@@ -15,7 +15,7 @@ export default function Todo({todo, onUpdate, onDelete}) {
 				onChange={handleChange}
 				id="checkbox"
 			/>
-			<label htmlFor="checkbox">{todo.task}</label>
+			<label htmlFor="checkbox">{task}</label>
 			{task}
 			<button onClick={handleDelete}>🗑️</button>
 			{/* <button onClick={handleDelete}><FiTrash /></button> */}
