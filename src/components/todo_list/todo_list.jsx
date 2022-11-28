@@ -8,7 +8,7 @@ export default function TodoList() {
 		{id: '2', task: '잠자기', status: 'active'}
 	])
 
-	const handleTask = (todo) => {
+
 	const handleTask = todo => {
 		// console.log(todo)
 		setTodos([...todos, todo])
