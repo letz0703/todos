@@ -9,14 +9,25 @@ export default function TodoList() {
 	])
 
 	const handleTask = (todo) => {
+	const handleTask = todo => {
 		// console.log(todo)
 		setTodos([...todos, todo])
+	}
+
+	const handleDelete = (e) => {
+		setTodos(todos.filter(todo => todo.task !== e.target.value)
+		)
 	}
 
 	return (
 		<section className="todos">
 			<ul>
-				{todos.map(row => <li key={row.id}>{row.task}</li>)}
+				{todos.map(row => (
+					<li key={uuidv4()}>
+						{row.task}
+						<button onClick={handleDelete} value={row.task}>🗑️</button>
+					</li>
+				))}
 			</ul>
 			<AddTask onAdd={handleTask} />
 		</section>
