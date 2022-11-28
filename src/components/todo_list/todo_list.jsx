@@ -1,5 +1,6 @@
 import {useState} from "react"
 import AddTask from "../add_task/add_task"
+
 import {VscTrash} from "react-icons/vsc"
 import {v4 as uuidv4} from 'uuid'
 import Todo from "../todo/todo"
@@ -11,7 +12,6 @@ export default function TodoList() {
 	])
 
 	const handleTask = todo => {
-		// console.log(todo)
 		setTodos([...todos, todo])
 	}
 
@@ -23,6 +23,7 @@ export default function TodoList() {
 		row => (row.id === updated.id ? updated : row)
 	))
 
+
 	return (
 		<section className="todos">
 			<ul>
@@ -32,6 +33,7 @@ export default function TodoList() {
 						onDelete={handleDelete}
 					/>
 				])}
+
 			</ul>
 			<AddTask onAdd={handleTask} />
 		</section>
