@@ -1,6 +1,6 @@
 import React from "react"
 //import styles from './todo.module.css'
-import {FiTrash} from "react-icons/fi"
+// import {FiTrash} from "react-icons/fi"
 
 export default function Todo({todo, onUpdate, onDelete}) {
 	const {task, status} = todo
@@ -17,7 +17,8 @@ export default function Todo({todo, onUpdate, onDelete}) {
 			/>
 			<label htmlFor="checkbox">{todo.task}</label>
 			{task}
-			<button onClick={handleDelete}><FiTrash /></button>
+			<button onClick={handleDelete}>🗑️</button>
+			{/* <button onClick={handleDelete}><FiTrash /></button> */}
 		</li>
 	)
 }
