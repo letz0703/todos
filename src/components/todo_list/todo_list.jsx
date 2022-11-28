@@ -11,17 +11,15 @@ export default function TodoList() {
 		{id: "2", task: "잠자기", status: "active"}
 	])
 
-	const handleTask = todo => {
-		setTodos([...todos, todo])
-	}
-
+	const handleTask = todo => {setTodos([...todos, todo])}
+	const handleUpdate = (updated) => setTodos(todos.map(
+		row => (row.id === updated.id ? updated : row)
+	))
 	const handleDelete = (todo) => {
 		setTodos(todos.filter(row => row.id !== todo.id))
 	}
 
-	const handleUpdate = (updated) => setTodos(todos.map(
-		row => (row.id === updated.id ? updated : row)
-	))
+
 
 
 	return (

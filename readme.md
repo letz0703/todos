@@ -8,6 +8,8 @@ https://bit.ly/3OCFGTp <- personal
 
 ### check and delete
 gh: https://bit.ly/3u7c1YS
+lecture:https://bit.ly/3VcChwR : todos_list, Todo component
+keys: uuidv4, handleXXX, onXXX, react-icons
 
 ##### Version
 > v1 Vanilla todos
