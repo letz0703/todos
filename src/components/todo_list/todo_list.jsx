@@ -31,6 +31,8 @@ export default function TodoList({filter}) {
 				))}
 			</ul>
 			<AddTask onAdd={handleTask} />
+
+			<a href="https://github.com/letz0703/todos/archive/refs/tags/v1.zip">download zip</a>
 		</section>
 	)
 }

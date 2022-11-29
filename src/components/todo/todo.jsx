@@ -7,6 +7,7 @@ export default function Todo({todo, onChange, onDelete}) {
 		const status = e.target.checked ? 'completed' : 'active'
 		onChange({...todo, status})
 	}
+
 	return <li className="flex items-center">
 		<input type="checkbox"
 			checked={status === 'completed'}
@@ -16,4 +17,5 @@ export default function Todo({todo, onChange, onDelete}) {
 		<label htmlFor="checkbox">{task}</label>
 		<button onClick={handleDelete}><VscTrash /></button>
 	</li>
+
 }
