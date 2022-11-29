@@ -19,9 +19,6 @@ export default function TodoList() {
 		setTodos(todos.filter(row => row.id !== todo.id))
 	}
 
-
-
-
 	return (
 		<section className="todos">
 			<ul>
