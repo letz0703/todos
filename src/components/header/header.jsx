@@ -1,7 +1,7 @@
 export default function Header({filters, onFilterChange}) {
 	return (
 		<header>
-			<div className="flex list-none">
+			<div className="flex">
 				<ul>
 					{filters.map((value, index) => (
 						<li key={index}>
