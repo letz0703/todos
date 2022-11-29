@@ -1,7 +1,15 @@
-export default function Header() {
+export default function Header({filters, onFilterChange}) {
 	return (
-		<h1>
-			Header
-		</h1>
+		<header>
+			<div className="flex list-none">
+				<ul>
+					{filters.map((value, index) => (
+						<li key={index}>
+							<button onClick={() => onFilterChange(value)}>{value}</button>
+						</li>
+					))}
+				</ul>
+			</div>
+		</header>
 	)
 }
