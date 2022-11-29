@@ -24,6 +24,9 @@ export default function TodoList() {
 
 	return (
 		<section className="todos">
+			<button>TASK list</button>
+			<button>todo</button>
+			<button>Finished</button>
 			<ul>
 				{todos.map(row => [
 					<Todo key={uuidv4()} todo={row}
