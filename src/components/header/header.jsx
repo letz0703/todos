@@ -1,17 +1,5 @@
-export default function Header({filters, onFilterChange}) {
-	return (
-		<header>
-			<div className="flex">
-				<ul>
-					{filters.map((value, index) => (
-						<li key={index}>
-							<button onClick={() => onFilterChange(value)}>{value}</button>
-						</li>
-					))}
-				</ul>
-			</div>
-		</header>
-	)
+import styles from "./header.module.css"
+
 export default function Header({filters, filter, onFilterChange}) {
   return (
     <header className={styles.header}>
@@ -29,4 +17,6 @@ export default function Header({filters, filter, onFilterChange}) {
           </li>
         ))}
       </ul>
+    </header>
+  )
 }
