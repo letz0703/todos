@@ -12,7 +12,7 @@ export default function Todo({todo, onChange, onDelete}) {
   };
 
   return (
-    <li className="flex items-center {{style }}" className={styles.todo}>
+    <li className="flex items-center {{styles.todo }}">
       <input
         type="checkbox"
         checked={status === 'completed'}
