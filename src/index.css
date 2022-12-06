@@ -4,18 +4,16 @@
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 24px;
   font-weight: 400;
+  box-sizing: border-box;
 
-  --color-bg-dark:#f5f5f5;
+  --color-bg-dark: #f5f5f5;
   --color-bg: #fdfffd;
   --color-gray: #d1d1d1;
   --color-text: #22243b;
   --color-accent: #c10002;
-
-
-
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -31,18 +29,20 @@
 #root {
   width: 100%;
   height: 60%;
-  max-width: 860px;
+  max-width: 500px;
   background-color: var(--color-bg-dark);
+  overflow: hidden;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 5px 21px 4px rgba(0,0,0, .45);
+  box-shadow: 5px 5px 21px 4px rgba(0, 0, 0, 0.45);
 }
 
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+  outline: none;
 }
 a:hover {
   color: #535bf2;
@@ -89,7 +89,6 @@ ul {
   padding-left: 0;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -100,5 +99,7 @@ ul {
   }
   button {
     background-color: #f9f9f9;
+    /* outline: none; */
+    border: none;
   }
 }
